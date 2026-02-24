@@ -16,3 +16,7 @@ Vite + React + TypeScript kullanilarak olusturulmustur.
 ## Kurulum
 ```bash
 npm install
+
+## Proje Görseli
+
+![LAB-1 Screenshot](./web-images/screenshot.png)
