@@ -1,22 +1,27 @@
 # Web LAB -1 - Hello Project
 
-## Hakkinda
-Bu proje, Web Tasarimi ve Programlama dersi LAB-1 kapsaminda 
-Vite + React + TypeScript kullanilarak olusturulmustur.
+## Hakkında
+Bu proje, Web Tasarımı ve Programlama dersi LAB-1 kapsamında  
+Vite + React + TypeScript kullanılarak oluşturulmuştur.
 
-## Gelistirici
-- **Ad Soyad:** Betül Altunyuva
-- **Ogrenci No:** XXXXX
+## Geliştirici
+- **Ad Soyad:** Betül Altunyuva  
+- **Öğrenci No:** XXXXX  
 
-## Kullanilan Teknolojiler
-- React 18
-- TypeScript
-- Vite
+## Kullanılan Teknolojiler
+- React 18  
+- TypeScript  
+- Vite  
 
 ## Kurulum
+
 ```bash
 npm install
+npm run dev
+```
 
 ## Proje Görseli
 
-![LAB-1 Screenshot](./web-images/screenshot.png)
+<p align="center">
+  <img src="./web-images/screenshot.png" alt="LAB-1 Screenshot" width="800"/>
+</p>
