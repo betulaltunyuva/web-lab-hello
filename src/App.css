@@ -27,6 +27,8 @@ nav a {
   color: #4da3ff;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 16px;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -63,7 +65,7 @@ html {
 }
 
 button {
-  background-color: #4da3ff;
+  background-color: #1e3a8a;
   color: white;
   border: none;
   padding: 8px 16px;

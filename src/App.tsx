@@ -1,12 +1,17 @@
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
     <>
+      {/* Skip Link */}
+      <a href="#main-content" className="skip-link">
+        Ana içeriğe atla
+      </a>
+
       <header>
         <h1>Semantic Portfolio</h1>
 
-        <nav>
+        <nav aria-label="Ana navigasyon">
           <ul>
             <li><a href="#hakkimda">Hakkımda</a></li>
             <li><a href="#projeler">Projeler</a></li>
@@ -15,16 +20,33 @@ function App() {
         </nav>
       </header>
 
-      <main>
+      <main id="main-content">
+        {/* Hakkımda */}
         <section id="hakkimda">
           <h2>Hakkımda</h2>
+
+          <figure>
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Betül Altunyuva profil fotoğrafı"
+            />
+            <figcaption>Betül Altunyuva</figcaption>
+          </figure>
+
           <p>
             Merhaba, ben Betül. Web Tasarımı ve Programlama dersi kapsamında
-            hazırlanan bu sayfa semantik HTML yapısını öğrenmek için
-            oluşturulmuştur.
+            hazırlanan bu sayfa semantik HTML yapısını öğrenmek için oluşturulmuştur.
           </p>
+
+          <h3>Kullandığım Teknolojiler</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>React</li>
+          </ul>
         </section>
 
+        {/* Projeler */}
         <section id="projeler">
           <h2>Projeler</h2>
 
@@ -40,9 +62,71 @@ function App() {
           </article>
         </section>
 
+        {/* İletişim */}
         <section id="iletisim">
           <h2>İletişim</h2>
-          <p>Email: <a href="mailto:betul@example.com">betul@example.com</a></p>
+
+          <form action="#" method="POST" noValidate>
+            <fieldset>
+              <legend>İletişim Formu</legend>
+
+              <div className="form-group">
+                <label htmlFor="name">Ad Soyad:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  minLength={2}
+                  aria-describedby="name-error"
+                />
+                <small id="name-error" className="error-msg" role="alert"></small>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">E-posta:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-describedby="email-error"
+                />
+                <small id="email-error" className="error-msg" role="alert"></small>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="subject">Konu:</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  aria-describedby="subject-error"
+                >
+                  <option value="">-- Seçiniz --</option>
+                  <option value="is">İş Teklifi</option>
+                  <option value="soru">Soru</option>
+                  <option value="oneri">Öneri</option>
+                </select>
+                <small id="subject-error" className="error-msg" role="alert"></small>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Mesajınız:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  minLength={10}
+                  aria-describedby="message-error"
+                ></textarea>
+                <small id="message-error" className="error-msg" role="alert"></small>
+              </div>
+
+              <button type="submit">Gönder</button>
+            </fieldset>
+          </form>
         </section>
       </main>
 
@@ -50,7 +134,7 @@ function App() {
         <p>© 2026 Betül Altunyuva</p>
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
