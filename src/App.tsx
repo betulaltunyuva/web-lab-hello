@@ -5,6 +5,8 @@ function App() {
       <h2>LAB - 1</h2>
       <p>Ad Soyad: Betül Altunyuva</p>
       <p>Öğrenci No: XXXXX</p>
+      <p>Bölüm: ...</p>
+      <p>Hobiler: ...</p>
     </div>
   )
 }
