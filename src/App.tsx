@@ -1,3 +1,5 @@
+import './App.css'
+
 function App() {
   return (
     <>
@@ -29,6 +31,7 @@ function App() {
           <article>
             <h3>Proje 1</h3>
             <p>İlk web tasarım çalışmam.</p>
+            <button>Detay Gör</button>
           </article>
 
           <article>
@@ -39,7 +42,7 @@ function App() {
 
         <section id="iletisim">
           <h2>İletişim</h2>
-          <p>Email: betul@example.com</p>
+          <p>Email: <a href="mailto:betul@example.com">betul@example.com</a></p>
         </section>
       </main>
 

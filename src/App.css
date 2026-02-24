@@ -29,6 +29,10 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  color: white;
+}
+
 main {
   padding: 2rem;
   max-width: 900px;
@@ -39,8 +43,12 @@ section {
   margin-bottom: 3rem;
 }
 
-h1, h2, h3 {
+article {
+  background: white;
+  padding: 1rem;
   margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 footer {
@@ -48,4 +56,33 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: #4da3ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1f2d3d;
+}
+
+@media (max-width: 600px) {
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header {
+    padding: 1.5rem;
+  }
 }
