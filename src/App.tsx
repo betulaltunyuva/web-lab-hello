@@ -53,7 +53,7 @@ function App() {
           <article>
             <h3>Proje 1</h3>
             <p>İlk web tasarım çalışmam.</p>
-            <button>Detay Gör</button>
+            <button type="button">Detay Gör</button>
           </article>
 
           <article>
@@ -80,7 +80,7 @@ function App() {
                   minLength={2}
                   aria-describedby="name-error"
                 />
-                <small id="name-error" className="error-msg" role="alert"></small>
+                <small id="name-error" role="alert"></small>
               </div>
 
               <div className="form-group">
@@ -92,7 +92,7 @@ function App() {
                   required
                   aria-describedby="email-error"
                 />
-                <small id="email-error" className="error-msg" role="alert"></small>
+                <small id="email-error" role="alert"></small>
               </div>
 
               <div className="form-group">
@@ -108,7 +108,7 @@ function App() {
                   <option value="soru">Soru</option>
                   <option value="oneri">Öneri</option>
                 </select>
-                <small id="subject-error" className="error-msg" role="alert"></small>
+                <small id="subject-error" role="alert"></small>
               </div>
 
               <div className="form-group">
@@ -121,7 +121,7 @@ function App() {
                   minLength={10}
                   aria-describedby="message-error"
                 ></textarea>
-                <small id="message-error" className="error-msg" role="alert"></small>
+                <small id="message-error" role="alert"></small>
               </div>
 
               <button type="submit">Gönder</button>
