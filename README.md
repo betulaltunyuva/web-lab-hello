@@ -23,5 +23,5 @@ npm run dev
 ## Proje Görseli
 
 <p align="center">
-  <img src="./web-images/screenshot.png" alt="LAB-1 Screenshot" width="800"/>
+  <img src="./web-images/web-lab-hello.png" alt="LAB-1 Screenshot" width="800"/>
 </p>
