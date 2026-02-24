@@ -25,3 +25,10 @@ npm run dev
 <p align="center">
   <img src="./web-images/web-lab-hello.png" alt="LAB-1 Screenshot" width="800"/>
 </p>
+```
+
+## Lighthouse Accessibility Raporu
+
+Erişilebilirlik puanı: **93**
+
+![Lighthouse Score](web-images/lighthouse-score.png)
