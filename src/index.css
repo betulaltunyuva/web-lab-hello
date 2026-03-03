@@ -1,3 +1,4 @@
+@import "./styles/tokens.css";
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +66,139 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* ===== GENEL RESET ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Section boşlukları */
+section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* Section başlıkları */
+section h2 {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* site başlığı */
+.site-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-md);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+
+/* ===== MOBIL MENU ===== */
+@media (max-width: 639px) {
+  header {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* ===== PROJECT GRID ===== */
+.project-grid {
+  display: grid;
+
+  /* OTOMATIK RESPONSIVE GRID */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: var(--space-xl);
+}
+
+/* ===== PROJECT CARD ===== */
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: transform var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 640px) {
+
+  section {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 1024px) {
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: var(--space-2xl);
+  }
+
 }
