@@ -50,16 +50,20 @@ function App() {
         <section id="projeler">
           <h2>Projeler</h2>
 
-          <article>
-            <h3>Proje 1</h3>
-            <p>İlk web tasarım çalışmam.</p>
-            <button type="button">Detay Gör</button>
-          </article>
+          <div className="project-grid">
 
-          <article>
-            <h3>Proje 2</h3>
-            <p>React ile geliştirdiğim örnek proje.</p>
-          </article>
+            <article className="project-card">
+              <h3>Proje 1</h3>
+              <p>İlk web tasarım çalışmam.</p>
+              <button type="button">Detay Gör</button>
+            </article>
+
+            <article className="project-card">
+              <h3>Proje 2</h3>
+              <p>React ile geliştirdiğim örnek proje.</p>
+            </article>
+
+          </div>
         </section>
 
         {/* İletişim */}
