@@ -4,138 +4,76 @@ function App() {
   return (
     <>
       {/* Skip Link */}
-      <a href="#main-content" className="skip-link">
+      <a href="#main-content" className="sr-only focus:not-sr-only">
         Ana içeriğe atla
       </a>
 
-      <header>
-        <h1>Semantic Portfolio</h1>
+      <header className="bg-gray-900 text-white p-6">
+        <h1 className="text-3xl font-bold">Semantic Portfolio</h1>
 
-        <nav aria-label="Ana navigasyon">
-          <ul>
+        <nav aria-label="Ana navigasyon" className="mt-4">
+          <ul className="flex flex-col md:flex-row gap-4 md:gap-6">
             <li><a href="#hakkimda">Hakkımda</a></li>
             <li><a href="#projeler">Projeler</a></li>
             <li><a href="#iletisim">İletişim</a></li>
+            <li><a href="/uikit">UI Kit</a></li>
           </ul>
         </nav>
       </header>
 
-      <main id="main-content">
-        {/* Hakkımda */}
-        <section id="hakkimda">
-          <h2>Hakkımda</h2>
+      <main id="main-content" className="p-8 max-w-5xl mx-auto">
 
-          <figure>
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Betül Altunyuva profil fotoğrafı"
-            />
-            <figcaption>Betül Altunyuva</figcaption>
-          </figure>
+        {/* HAKKIMDA */}
+        <section id="hakkimda" className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">Hakkımda</h2>
 
           <p>
-            Merhaba, ben Betül. Web Tasarımı ve Programlama dersi kapsamında
-            hazırlanan bu sayfa semantik HTML yapısını öğrenmek için oluşturulmuştur.
+            Merhaba, ben Betül. Bu sayfa semantik HTML yapısını öğrenmek için
+            hazırlanmıştır.
           </p>
-
-          <h3>Kullandığım Teknolojiler</h3>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>React</li>
-          </ul>
         </section>
 
-        {/* Projeler */}
-        <section id="projeler">
-          <h2>Projeler</h2>
+        {/* PROJELER */}
+        <section id="projeler" className="mb-10">
+          <h2 className="text-2xl font-semibold mb-4">Projeler</h2>
 
-          <div className="project-grid">
-
-            <article className="project-card">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+            <article className="border p-5 rounded shadow">
               <h3>Proje 1</h3>
               <p>İlk web tasarım çalışmam.</p>
-              <button type="button">Detay Gör</button>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded">
+                Detay Gör
+              </button>
             </article>
 
-            <article className="project-card">
+            <article className="border p-5 rounded shadow bg-gray-100">
               <h3>Proje 2</h3>
-              <p>React ile geliştirdiğim örnek proje.</p>
+              <p>React örnek proje.</p>
+              <button className="border px-4 py-2 rounded">
+                Detay Gör
+              </button>
             </article>
-
           </div>
         </section>
 
-        {/* İletişim */}
+        {/* İLETİŞİM */}
         <section id="iletisim">
-          <h2>İletişim</h2>
+          <h2 className="text-2xl font-semibold mb-6">İletişim</h2>
 
-          <form action="#" method="POST" noValidate>
-            <fieldset>
-              <legend>İletişim Formu</legend>
-
-              <div className="form-group">
-                <label htmlFor="name">Ad Soyad:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  minLength={2}
-                  aria-describedby="name-error"
-                />
-                <small id="name-error" role="alert"></small>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">E-posta:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  aria-describedby="email-error"
-                />
-                <small id="email-error" role="alert"></small>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="subject">Konu:</label>
-                <select
-                  id="subject"
-                  name="subject"
-                  required
-                  aria-describedby="subject-error"
-                >
-                  <option value="">-- Seçiniz --</option>
-                  <option value="is">İş Teklifi</option>
-                  <option value="soru">Soru</option>
-                  <option value="oneri">Öneri</option>
-                </select>
-                <small id="subject-error" role="alert"></small>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Mesajınız:</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  minLength={10}
-                  aria-describedby="message-error"
-                ></textarea>
-                <small id="message-error" role="alert"></small>
-              </div>
-
-              <button type="submit">Gönder</button>
-            </fieldset>
+          <form className="space-y-4">
+            <input className="border p-2 w-full" placeholder="Ad Soyad" />
+            <input className="border p-2 w-full" placeholder="E-posta" />
+            <textarea className="border p-2 w-full" placeholder="Mesaj" />
+            <button className="bg-green-600 text-white px-4 py-2 rounded">
+              Gönder
+            </button>
           </form>
         </section>
+
       </main>
 
-      <footer>
-        <p>© 2026 Betül Altunyuva</p>
+      <footer className="bg-gray-900 text-white text-center p-4">
+        © 2026 Betül Altunyuva
       </footer>
     </>
   );
