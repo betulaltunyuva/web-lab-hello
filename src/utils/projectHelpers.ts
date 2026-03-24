@@ -16,6 +16,7 @@ export function filterBySearch(
     (p) =>
       p.title.toLowerCase().includes(lower) ||
       p.description.toLowerCase().includes(lower) ||
+      p.category.toLowerCase().includes(lower) ||
       p.tech.some((t) => t.toLowerCase().includes(lower))
   );
 }
